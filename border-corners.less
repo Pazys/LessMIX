@@ -1,4 +1,6 @@
-.border-corners (@top-right: 5px 5px, @bottom-right: 5px 5px, @bottom-left: 5px 5px, @top-left: 5px 5px, ){
+// Add border radius (each corner individually)
+
+.border-corners (@top-right: 5px 5px, @bottom-right: 5px 5px, @bottom-left: 5px 5px, @top-left: 5px 5px) {
   -webkit-border-top-right-radius: @top-right;
       -moz-border-radius-topright: @top-right;
           border-top-right-radius: @top-right;
@@ -11,4 +13,13 @@
   -webkit-border-top-left-radius: @top-left;
       -moz-border-radius-topleft: @top-left;
           border-top-left-radius: @top-left;
+}
+
+// Example
+
+.example_border-corners-1 {
+  .border-corners(5px 15px, 5px 15px, 5px 15px, 5px 15px);
+}
+.example_border-corners-2 {
+  .border-corners(20px, 0, 20px, 0);
 }

@@ -1,3 +1,15 @@
-.opacity(@op:0.5) {
-       opacity:@op; /* Standart CSS3 */
+// Add opacity
+
+.opacity (@opacity:0.5) {
+       opacity:@opacity; // Standart CSS3
+  -moz-opacity:@opacity; // Moz 1.6-
+-khtml-opacity:@opacity; // Konqueror 3.1, Safari 1.1
+        filter:progid:DXImageTransform.Microsoft.Alpha(opacity=(@opacity * 100)); // IE 5.5+
+  zoom: 1; // for IE without width/height
+}
+
+// Example
+
+.example_opacity {
+  .opacity(0.7);
 }
